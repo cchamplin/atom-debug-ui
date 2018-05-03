@@ -14,6 +14,8 @@ Provides a UI interface and basic functionality for building debugging inside At
 - Breakpoint Settings
 - Customizable Action Bar
 
+![](https://raw.githubusercontent.com/cchamplin/atom-debug-ui/master/screenshot.gif)
+
 # Getting Started
 The best place to start will be by looking at existing projects like [PHP-Debug](https://github.com/gwomacks/php-debug) and by reading the documentation under /docs
 
