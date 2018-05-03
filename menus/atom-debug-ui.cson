@@ -1,0 +1,28 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Debug'
+      'submenu': [
+        {
+          'label': 'Toggle Debugging'
+          'command': 'atom-debug-ui:toggleDebugging'
+        },
+        {
+          'label': 'Toggle Breakpoint'
+          'command': 'atom-debug-ui:toggleBreakpoint'
+        },
+        { type: 'separator'},
+        {
+          'label': 'Clear All Breakpoints'
+          'command': 'atom-debug-ui:clearAllBreakpoints'
+        },
+        {
+          'label': 'Clear All Watchpoints'
+          'command': 'atom-debug-ui:clearAllWatchpoints'
+        }
+      ]
+    ]
+  }
+]

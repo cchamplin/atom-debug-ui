@@ -1,0 +1,99 @@
+{
+  "name": "atom-debug-ui",
+  "main": "./lib/debug-ui",
+  "version": "1.0.0",
+  "description": "A package to provider a user interface for external debugging inside atom",
+  "repository": "https://github.com/cchamplin/atom-debug-ui",
+  "bugs": {
+    "url": "https://github.com/cchamplin/atom-debug-ui/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.17.0 <2.0.0"
+  },
+  "keywords": [
+    "debugging",
+    "debugger",
+    "debug",
+    "xdebug"
+  ],
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.3",
+    "auto-bind-inheritance": "^1.0.6",
+    "etch": "^0.12.6",
+    "event-kit": "^1.0.3",
+    "fast-glob": "^2.2.1",
+    "interact.js": "^1.2.5",
+    "jsdoc-to-markdown": "^4.0.1",
+    "multimatch": "^2.1.0",
+    "promise": "^8.0.1",
+    "q": "^1.1.2",
+    "uuid": "3.0.1",
+    "xml2js": ">= 0.4.6 < 0.5"
+  },
+  "providedServices": {
+    "debug-ui": {
+      "versions": {
+        "0.1.0": "provideDebugUIService"
+      }
+    }
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "debug-engine": {
+      "versions": {
+        "0.1.0": "consumeDebugEngine"
+      }
+    }
+  },
+  "configSchema": {
+    "gutters": {
+      "type": "object",
+      "properties": {
+        "gutterBreakpointToggle": {
+          "title": "Enable breakpoint markers in the gutter",
+          "default": true,
+          "type": "boolean",
+          "description": "Enables breakpoints to be displayed and toggled via the editor gutter"
+        },
+        "gutterPosition": {
+          "title": "Gutter Position",
+          "default": "Right",
+          "type": "string",
+          "description": "Display the breakpoint gutter to the left or right of the line numbers",
+          "enum": [
+            "Left",
+            "Right"
+          ]
+        }
+      }
+    },
+    "display": {
+      "type": "object",
+      "properties": {
+        "enableActionBar": {
+          "title": "Enable Action Bar",
+          "default": true,
+          "type": "boolean",
+          "description": "Enable an overlay actionbar for debugging"
+        },
+        "activateWindow": {
+          "title": "Activate Atom window after breakpoint is hit",
+          "default": true,
+          "type": "boolean",
+          "description": ""
+        },
+        "autoCloseEndedSessions": {
+          "title": "Automatically close debugging windows after a debug session ends",
+          "default": true,
+          "type": "boolean",
+          "description": "Attempt to automatically close windows after a session ends. This may not apply for the default debugging window"
+        }
+      }
+    }
+  }
+}

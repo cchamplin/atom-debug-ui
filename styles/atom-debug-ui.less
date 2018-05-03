@@ -1,0 +1,397 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import (inline) "../iconsets/materialdesignicons.css";
+
+atom-panel.atom-debug-ui-action-bar-modal.modal {
+  width: auto;
+  border-color: #929292;
+  border-style:solid;
+  border-radius: 0.325rem;
+  padding: 0;
+  border-width:2px;
+  top: 6%;
+  max-width: max-content;
+
+}
+atom-panel.atom-debug-ui-action-bar-modal.modal:before {
+  content:none;
+}
+atom-panel.atom-debug-ui-action-bar-modal.modal:after {
+  content:none;
+}
+
+.atom-debug-ui-action-bar-overlay {
+  padding: 0.65rem;
+  .btn-hidden {
+    display:none;
+  }
+  .mini {
+    .atom-debug-ui-view-buttons {
+      display: none;
+    }
+    .btn-text {
+      display: none;
+    }
+  }
+}
+
+.right,
+.left {
+  .atom-debug-ui {
+    .btn-hidden {
+      display:none;
+    }
+    //overflow-y: scroll;
+    .action-bar.main {
+      .atom-debug-ui-view-buttons {
+        display:none;
+      }
+    }
+    .sidebar.hasChildren {
+      display:block;
+      position:absolute;
+      bottom: 0;
+    }
+    .sidebar .atom-debug-ui-action-buttons {
+      display:none;
+    }
+    .atom-debug-ui-collapsable[data-expanded="false"] {
+      flex-grow:0;
+      flex-shrink:1;
+      flex-basis:auto;
+    }
+
+    .panel-heading .close-icon {
+      display:none;
+    }
+    .restore-btn {
+      display:none;
+    }
+    .atom-debug-ui-contents {
+      margin-bottom: 8.5px;
+    }
+    .tabs-view {
+      flex-wrap: wrap;
+      flex-direction:column;
+      flex:1
+    }
+    .tabs-wrapper {
+      padding-bottom: 30px;
+    }
+    .atom-debug-ui-tab
+    {
+      flex:1;
+      overflow-y: scroll;
+      width:100%;
+    }
+  }
+  .atom-debug-ui.narrow {
+    .btn-text {
+      display:none;
+    }
+  }
+}
+
+.atom-debug-ui {
+  .btn-hidden {
+    display:none;
+  }
+  .sidebar {
+    display: none;
+  }
+  overflow-y: hidden;
+  .atom-debug-ui-view-buttons {
+    float: right;
+  }
+  .syntax--variable:after {
+    content: "=";
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .syntax--property:after {
+    content: ":";
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .atom-debug-ui-tab
+  {
+    flex:1;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+  }
+  .view-mode-btn {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+  }
+  .tabs-view {
+    margin-top: 8.5px;
+  }
+  .breakpoint-line
+  {
+    padding-left: 5px;
+  }
+  .stack-frame-label
+  {
+
+  }
+  .stack-frame-filepath
+  {
+
+  }
+
+  .stack-frame-exception,
+  .stack-frame-error {
+    background-color: fade(@background-color-error,15%) !important;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+}
+.atom-debug-ui-console {
+  .atom-debug-ui-console-view-container {
+    height:100%;
+  }
+  .console-list-view {
+    list-style:none;
+    margin-left: 0;
+    padding-left:1em;
+    margin-bottom:2.5px;
+  }
+  .panel-title {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .console-item {
+    list-style:none;
+    border-bottom: 1px solid #383232;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    .line {
+      white-space: pre-wrap;
+    }
+  }
+  .console-panel {
+    min-height: 100%;
+    display:flex;
+    flex-direction:column;
+    margin-top:-10px;
+    height: 100%;
+  }
+  .atom-debug-ui-console-contents {
+    flex:1;
+    flex-direction: column;
+    overflow-y: scroll;
+    height:100%
+  }
+  .editor-container {
+    flex:1;
+    flex-direction:column;
+    max-height:58px;
+  }
+  .editor-container .editor::shadow {
+    .line-numbers {
+      text-indent: 999em;
+      width: 3px;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+}
+
+.atom-debug-ui-breakpoints-settings.breakpoint-settings-view {
+  .breakpoint-settings-actions .action-list {
+    float:right;
+  }
+  .btn {
+    margin-left: 6px;
+  }
+  .breakpoint-settings-actions {
+    overflow: auto;
+  }
+  .setting-container atom-text-editor[mini] {
+    width: 100%;
+  }
+  .setting-container .setting-action {
+    padding-left: .5em;
+    line-height: 2em;
+  }
+  .setting-container {
+    display:flex;
+    align-items: stretch;
+  }
+  .close-icon:hover {
+   transform:scale(1.5);
+   transition:transform .08s;
+ }
+}
+
+atom-panel.modal .atom-debug-ui-breakpoints-settings.breakpoint-settings-view {
+  .setting-new atom-text-editor[mini] {
+    margin-bottom: .15em;
+  }
+}
+
+.atom-debug-ui .breakpoint-settings-view .close-icon,
+.atom-debug-ui .panel-heading .close-icon,
+.atom-debug-ui .atom-debug-ui-watches .close-icon,
+.atom-debug-ui .atom-debug-ui-watchpoints .close-icon,
+.atom-debug-ui .atom-debug-ui-breakpoints .close-icon {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  cursor: default;
+  top: -0.5em;
+  right: 0;
+  z-index: 2;
+  padding: 0 0.8em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  transform:scale(1);
+  transition:transform .08s;
+}
+.atom-debug-ui .atom-debug-ui-breakpoints .close-icon {
+    right: 0.1em;
+}
+
+.atom-debug-ui .atom-debug-ui-breakpoints .settings-icon {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  cursor: default;
+  top: -0.5em;
+  right: 2.0em;
+  z-index: 2;
+  padding: 0 0.8em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  transform:scale(1);
+  transition:transform .08s;
+}
+
+.atom-debug-ui-breakpoints-settings.breakpoint-settings-view .close-icon:before,
+.atom-debug-ui .panel-heading .close-icon:before,
+.atom-debug-ui .atom-debug-ui-watches .close-icon:before,
+.atom-debug-ui .atom-debug-ui-watchpoints .close-icon:before,
+.atom-debug-ui .atom-debug-ui-breakpoints .close-icon:before {
+  font-family: 'Octicons Regular';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+  content: "\f081";
+}
+
+.atom-debug-ui .atom-debug-ui-breakpoints .settings-icon:before {
+  font-family: 'Octicons Regular';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+  content: "\f02F";
+}
+
+.atom-debug-ui-breakpoints {
+  .breakpoint-item {
+    position:relative;
+  }
+  .settings-icon:hover,
+  .close-icon:hover {
+    transform:scale(1.1);
+    transition:transform .08s;
+  }
+  .watchpoint-item {
+    position:relative;
+  }
+}
+
+.atom-debug-ui-watches,
+.atom-debug-ui-watchpoints {
+  .watch-item {
+    position:relative;
+  }
+  .watchpoint-item {
+    position:relative;
+  }
+  .close-icon {
+    top: 0em;
+    right: 0;
+    height: 1em;
+    line-height: 1em;
+  }
+  .close-icon:hover {
+    transform:scale(1.1);
+    transition:transform .08s;
+  }
+  .atom-debug-ui-watches .editor-container {
+    padding-bottom: 2px;
+  }
+  .atom-debug-ui-watchpoints .editor-container {
+    padding-bottom: 2px;
+  }
+}
+
+.atom-debug-ui {
+
+  .panel-heading .close-icon:hover {
+   transform:scale(1.5);
+   transition:transform .08s;
+  }
+
+  .panel-heading .close-icon {
+    position:relative;
+    float:right;
+  }
+
+  .tabs-wrapper {
+    height:100%;
+  }
+
+  .tabs-view {
+      display: flex;
+      height: 100%;
+      padding-bottom: 75px;
+      .pane-item {
+        width: 100%;
+      }
+  }
+  .tabs-view:nth-child(1) {
+    order: 0;
+  }
+  .tabs-view:nth-child(2) {
+    order: 1;
+  }
+  .tabs-view:nth-child(3) {
+    order: 2;
+  }
+  .tabs-view:nth-child(3) {
+    order: 3;
+  }
+}
+
+.atom-debug-ui-collapsable[data-expanded="false"] {
+  .atom-debug-ui-collapsable-body {
+    display:none;
+  }
+}

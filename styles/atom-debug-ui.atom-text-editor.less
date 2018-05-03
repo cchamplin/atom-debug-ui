@@ -1,0 +1,74 @@
+@import "ui-variables";
+
+
+.gutter .atom-debug-ui-gutter {
+  height: 7px !important;
+  width: 7px;
+  display: block;
+  margin-left: 2px;
+  margin-top: 6px;
+  border-radius: 50%;
+}
+// Styling Error Types
+.gutter .atom-debug-ui-gutter.highlight {
+
+  background-color: @background-color-info;
+  color: white;
+
+}
+
+.gutter>.line-numbers>.atom-debug-ui-breakpoint,
+.gutter>.line-numbers>div>.atom-debug-ui-breakpoint,
+.gutter>.line-numbers>.tile>.atom-debug-ui-breakpoint {
+    color: #fff;
+    background-color: #0F0 !important;
+}
+
+.debug-break-break {
+  background-color: fade(@background-color-success,25%) !important;
+}
+.debug-break-generic {
+  background-color: fade(@background-color-success,25%) !important;
+}
+
+.debug-break-error,
+.debug-break-exception {
+  background-color: fade(@background-color-error,15%) !important;
+}
+
+.atom-debug-ui {
+  overflow: auto;
+}
+
+.atom-debug-ui-console {
+  padding-top: 10px;
+}
+.atom-debug-ui-debug-console-view {
+  margin: 0 10px 10px 10px;
+}
+.atom-debug-ui-unified-view {
+  height: 100%;
+  margin: 10px;
+}
+
+.atom-debug-ui-debug-view-toggle,
+.atom-debug-ui-console-view-toggle {
+  display: inline-block;
+  color: @text-color-subtle;
+  border: 1px solid @button-border-color;
+  background: fade(@button-background-color, 33%);
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  padding: 0 .6em;
+  line-height: 1.8em;
+  margin-right: 0.6em;
+
+  &:active {
+    background: transparent;
+  }
+  &.active {
+    color: @text-color-highlight;
+    background: @button-background-color;
+  }
+}
