@@ -1,3 +1,6 @@
+## 1.0.3
+* Fix errors on shutdown for uninitialized debuggers
+
 ## 1.0.2
 * Add toString methods for codepoints
 * Add event wireups for panel destruction
