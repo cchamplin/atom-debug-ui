@@ -1,7 +1,7 @@
 /* MaterialDesignIcons.com */
 @font-face {
   font-family: "Material Design Icons";
-  src: url("atom://ato-debug-ui/iconsets/materialdesignicons-webfont.woff") format("woff");
+  src: url("atom://atom-debug-ui/iconsets/materialdesignicons-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
