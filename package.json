@@ -1,7 +1,7 @@
 {
   "name": "atom-debug-ui",
   "main": "./lib/debug-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package to provider a user interface for external debugging inside atom",
   "repository": "https://github.com/cchamplin/atom-debug-ui",
   "bugs": {
