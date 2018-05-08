@@ -1,3 +1,6 @@
+## 1.0.4
+* Add missing autobind
+
 ## 1.0.3
 * Fix errors on shutdown for uninitialized debuggers
 
