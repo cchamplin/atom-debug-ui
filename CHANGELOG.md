@@ -1,3 +1,7 @@
+## 1.0.5
+* Fix errors on activation (thanks @keevan)
+* Change step forward/backward icons (thanks @erlangparasu)
+
 ## 1.0.4
 * Add missing autobind
 
